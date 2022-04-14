@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+    <title>Full Stack Project 02 - Home</title>
+</head>
+<body>
+    <div>
+        <%- include("../partials/navigation.ejs") %>
+    </div>
+    <div class="container-bg">
+        <div class="container">
+            <h1>Artist Info - <%= posts.artist.name %></h1>
+            <div class="row">
+                <div class="col-3">
+                    <a href=<%= posts.artist.url %>><img src=<%= posts.artist.image[4]["#text"] %> class="img-fluid" alt="Artist image"></a>
+                    <p class="imginfo">Last.fm API no longer offers artist images unfortunately. For this reason you will see this image in the place of artist images.</p>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-8">
+                    <p><%= posts.artist.bio.summary %></p>
+                    <p class="stat">Number of listeners: <%= posts.artist.stats.listeners %></p>
+                    <p class="stat">Total playcount: <%= posts.artist.stats.playcount %></p>
+                    <% if(posts.artist.ontour == 0){ yn = "No" } else{ yn = "Yes" } %>
+                    <p class="stat">Currently on tour: <%= yn %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <%- include("../partials/footer.ejs") %>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

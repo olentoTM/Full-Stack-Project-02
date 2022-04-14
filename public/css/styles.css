@@ -1,0 +1,56 @@
+html, body{
+    min-height: 100%;
+    position: relative;
+    background-color: rgb(17, 17, 17);
+}
+
+.container-bg{
+    background-color: rgb(17, 17, 17);
+}
+
+footer{
+    background-color: #d67010;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    color: white;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+p{
+    color: white;
+}
+
+.stat{
+    margin-bottom: 0px;
+}
+
+.imginfo{
+    padding-top: 5px;
+    font-size: small;
+}
+
+.card-text{
+    color: black;
+}
+
+.card{
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.container-similar{
+    margin-bottom: 100px;
+}
